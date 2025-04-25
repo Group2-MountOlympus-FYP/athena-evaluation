@@ -3,7 +3,6 @@ from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, field
 import json, re
 
-
 from bs4 import BeautifulSoup
 from pypdf import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -11,7 +10,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 
-from .athena_prompts import AthenaPrompts
+from athena_prompts import AthenaPrompts
 
 from dotenv import load_dotenv
 
@@ -284,7 +283,7 @@ class Athena:
     def _initialize_chains(self):
         """Initialize specialized chain managers for different functionalities"""
         # Chain manager for content-based operations (tutor and reviewer)
-        self.content_chain_manager = ChainManager(llm=self.llm, retriever=self.content_retriever, is_recommend=True)
+        self.content_chain_manager = ChainManager(llm=self.llm, retriever=self.content_retriever, is_recommend=False)
 
         # Initialize recommender if course data is available
         if self.course_retriever:
@@ -458,7 +457,7 @@ def create_athena_client():
     try:
         athena_client = Athena(
             api_key=api_key,
-            directory='study_materials',
+            directory='test_materials',
             model='gemini-2.0-flash',
             db_uri=db_uri
         )

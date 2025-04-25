@@ -12,5 +12,6 @@ To run this project you should have a `.env` file containing the following envir
 
 ```text
 GOOGLE_API_KEY=""
+OPENAI_API_KEY=""
 ```
 

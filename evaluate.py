@@ -1,10 +1,3 @@
-"""
-Evaluate the Athena RAG pipeline with Ragas.
-
-Usage:
-    python evaluation.py --dataset eval.csv --out ragas_report.json
-"""
-
 import argparse, json
 import pandas as pd
 from datasets import Dataset
@@ -67,3 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

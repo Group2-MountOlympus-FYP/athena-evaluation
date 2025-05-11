@@ -1,6 +1,6 @@
 # Athena Evaluation
 
-This repository contains code for evaluating Athena Intelligence, the RAG system for **Prometheus.EDU**.
+This repository contains code for evaluating Athena Intelligence, the RAG system for [**Prometheus.EDU**](https://github.com/Group2-MountOlympus-FYP/Prometheus.EDU).
 
 ## Evaluation Framework
 
